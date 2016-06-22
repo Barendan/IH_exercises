@@ -1,0 +1,65 @@
+
+body, header{
+  background-color: #FFFFFF;
+  font-family: "sans serif";
+  text-align: left;
+}
+
+.niceParagraph:hover {
+  background-color: #0000FF;
+  font-family: "sans serif";
+}
+
+#finalParagraph {
+  background-color: grey;
+  font-family: "Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif";
+}
+
+.floatedBox {
+    float: right;
+    padding: 20px 500px 300px 20px;
+}
+
+.shadowedBox {
+	-webkit-box-shadow:10px 5px 5px #888888;
+  -moz-box-shadow:10px 5px 5px #888888;
+  box-shadow: 10px 5px 5px #888888;
+}
+
+footer {
+  background-color: #444444;
+  padding: 10px 5px;
+  border-top: 5px solid white;
+  color: white;
+  font-size: 10px;
+  font-style: italic;
+  width: 100%;
+  }
+/*This example rule selects <p> tags that are inside the <footer> tag.
+*/
+.articleContainer {
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.postAuthor {
+  font-size: 20px;
+}
+
+footer a:link {
+  color: #FFFFFF;
+}
+
+footer a:visited {
+` color: #CCCCCC;
+}
+
+footer a:hover {
+  color: #999999;
+}
+
+
+
