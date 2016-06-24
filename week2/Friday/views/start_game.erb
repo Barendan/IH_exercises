@@ -1,0 +1,26 @@
+<script type="text/javascript">
+ 
+ window.onload = popUpQuestion;
+ function popUpQuestion(){
+    // var text=document.getElementById('input1').value;
+ 	alert("Which movie was filmed in <%= @correct_year %>?")
+ }
+</script>
+<center>
+<h1>Movie Game</h1>
+
+
+
+<div style=" width: 500px; ">
+	<% @movie_list[0..8].each do |movie| %>
+	<% if movie.year == @correct_year %>	<img src="<%= movie.poster %>" height="200" width="160" onClick="alert('Correct!')">
+	<% else %>	<img src="<%= movie.poster %>" height="200" width="160" onClick="alert('Incorrect!')">
+	<% end %>
+	<% end %>
+</style>
+</center>
+
+
+
+
+
