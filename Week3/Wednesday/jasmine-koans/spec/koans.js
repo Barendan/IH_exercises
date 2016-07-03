@@ -638,7 +638,7 @@ describe("the JavaScript language", function(){
             cat.feed();
             cat.feed();
 
-            //expect(cat.kilos).toEqual();
+            expect(cat.kilos).toEqual(3);
         });
 
         it("works different on dettached functions", function(){
@@ -647,8 +647,8 @@ describe("the JavaScript language", function(){
 
             feed();
 
-            //expect(window.kilos).toEqual();
-            //expect(cat.kilos).toEqual();
+            expect(window.kilos).toEqual(11);
+            expect(cat.kilos).toEqual(1);
         });
 
         it("can be bound explicitly with CALL and APPLY", function(){
@@ -656,7 +656,7 @@ describe("the JavaScript language", function(){
 
             feed.apply(cat);
 
-            //expect(cat.kilos).toEqual();
+            expect(cat.kilos).toEqual(2);
         });
 
         it("can be bound in modern browsers with BIND", function(){
@@ -665,7 +665,7 @@ describe("the JavaScript language", function(){
 
             bound();
 
-            //expect(cat.kilos).toEqual();
+            expect(cat.kilos).toEqual(2);
         });
 
         it("works different when function is attached to other object", function(){
@@ -674,8 +674,8 @@ describe("the JavaScript language", function(){
             otherCat.feed = cat.feed;
 
             otherCat.feed();
-            //expect(otherCat.kilos).toEqual();
-            //expect(cat.kilos).toEqual();
+            expect(otherCat.kilos).toEqual(11);
+            expect(cat.kilos).toEqual(1);
         });
 
         it("can be handled using the SELF trick", function(){
@@ -684,10 +684,10 @@ describe("the JavaScript language", function(){
 
             lion.hunt();
 
-            //expect(lion.energy).toEqual();
+            expect(lion.energy).toEqual(185);
         });
 
-        it("interprest the THIS when the function is executed", function(){
+        it("interprets the THIS when the function is executed", function(){
             var energy = 200;
             var lion = new Lion();
 
@@ -696,7 +696,7 @@ describe("the JavaScript language", function(){
             };
             lion.hunt();
 
-            //expect(lion.energy).toEqual();
+            expect(lion.energy).toEqual(4000);
         });
       });
 
@@ -733,7 +733,7 @@ describe("the JavaScript language", function(){
 
             lion.hunt();
 
-            //expect(called).toBe();
+            expect(called).toBe(true);
         });
 
         it("implements the observer pattern (one2many)", function(){
@@ -756,7 +756,7 @@ describe("the JavaScript language", function(){
 
             publisher.informAllObservers();
 
-            //expect(observer1WasCalled).toBeTruthy();    
+            // expect(observer1WasCalled).toBeTruthy();    
             //expect(observer2WasCalled).toBeTruthy();
         });
 
