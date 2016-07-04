@@ -7,6 +7,11 @@ class Viking {
 		this.strength = strength;
 	}
 
+	attack (otherFighter){
+    otherFighter.health -= this.strength * 2;
+	this.strength --;
+	}
+
 };
 
 module.exports = Viking;
