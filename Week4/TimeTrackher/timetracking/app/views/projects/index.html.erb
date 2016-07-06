@@ -2,13 +2,14 @@
 
 <ul>
 	<% @projects_array.each do |the_project| %>
-	<li> <%= if the_project.name != nil %>  
+	<li> <% if the_project.name != nil %> 
+		<b><%= the_project.name %></b>
 	- <%= the_project.description %>
-		<% end %>
+			<% end %>
 	</li>
 
 	<% end %>
 </ul>
-
+<br><a href="/projects/new">Add a New Project</a>
 
 
