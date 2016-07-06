@@ -1,0 +1,18 @@
+<!-- app/views/contacts/index.html.erb -->
+
+<h2> List of Contacts </h2>
+
+<ul>
+  <% @contacts_array.each do |the_contact| %>
+  <li> <a href="/contacts/<%= the_contact.id %>"> <%= the_contact.name %> </a>
+  </li>
+  <% end %>
+</ul>
+<br><Br>
+<a href="/contacts/new">Add New Contact</a>
+
+
+
+
+
+
