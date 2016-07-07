@@ -27,4 +27,6 @@ class ProjectsController < ApplicationController
 
 		redirect_to "/projects/#{@my_project.id}"
 	end
+
+	
 end

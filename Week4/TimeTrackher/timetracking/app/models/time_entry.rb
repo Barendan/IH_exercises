@@ -1,5 +1,12 @@
 class TimeEntry < ApplicationRecord
 	belongs_to :project
+
+	validates_associated :project
+	validates :hours, numericality: { only_integer: true }
+	validates :minutes, numericality: { only_integer: true }
+	validates :date, presence: true
+	validates :hours, presence: true
+	validates :minutes, presence: true
 end
 
 # the_entry = TimeEntry.create(
