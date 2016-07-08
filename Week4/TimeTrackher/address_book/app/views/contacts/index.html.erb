@@ -4,7 +4,7 @@
 
 <ul>
   <% @contacts_array.each do |the_contact| %>
-  <li> <a href="/contacts/<%= the_contact.id %>"> <%= the_contact.name %> </a>
+  <li> <a href="/contacts/<%= the_contact.id %>"> <%= the_contact.name.capitalize %> </a>
   </li>
   <% end %>
 </ul>

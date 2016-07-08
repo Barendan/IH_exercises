@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
 	end
 
 	def index
-		@contacts_array = Contact.order(name: "asc") 		
+		@contacts_array = Contact.order('Lower(name)') 		
 		render "index"
 	end
 
@@ -19,7 +19,8 @@ class ContactsController < ApplicationController
 		email_pattern = /^\w+@\w+\.[A-Za-z]+$/
 		phone_pattern = /(\+1 )?\(?[0-9]{3}\)? ?-?[0-9]{3}? ?-?[0-9]{4}/
 
-		if (contact.email_address =~ email_pattern) != nil && (contact.phone_number = phone_pattern)
+		if (contact.email_address =~ email_pattern) != nil && 
+			(contact.phone_number =~ phone_pattern) != nil
 			contact.save
 			redirect_to("/contacts")
 		else
@@ -31,4 +32,5 @@ class ContactsController < ApplicationController
 		@contact_info = Contact.find(params[:id])
 		render 'show'	
 	end
+
 end
