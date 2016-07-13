@@ -3,23 +3,33 @@
   <head>
  	<title>AJAX Example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="tuesdayPractice.js"></script>
   </head>
 
 <body>
 
   	<form class="js-character-form">
-  		<label>Name:</label>
-  		<input type="text" name="name" placeholder="Danny Boy"><br>
-  		<label>Occupation:</label>
-  		<input type="text" name="occupation" placeholder="Swinger"><br>
-  		<label>Weapon:</label>
-  		<input type="text" name="weapon" placeholder="Corny Jokes"><br><br>
+  		<label for="name">Name:</label>
+  		<input type="text" name="name" placeholder="Danny Boy" class="js-name"><br>
+  		<label for="occupation">Occupation:</label>
+  		<input type="text" name="occupation" placeholder="Swinger" class="js-occupation"><br>
+  		<label for="weapon">Weapon:</label>
+  		<input type="text" name="weapon" placeholder="Corny Jokes" class="js-weapon"><br><br>
 
 	<button type="submit">
 		Create new character
 	</button>
 </form>
+<br><br>
+
+<h2>Currently Available Characters:</h2>
+<button type="submit" class="js-fetch">
+	Show Characters
+</button>
+
+<ul class="js-character-list">
+</ul>
+
 
 </body>
 </html>
