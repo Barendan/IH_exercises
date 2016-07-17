@@ -16,9 +16,13 @@ PokemonApp.Pokemon = class {
 			success: function (response) {
 				console.log(response)
 
+				PokemonApp.evolutionsArray = response.evolutions;
 				PokemonApp.pokeGetImage(response.sprites[0].resource_uri);
-				var lastArr = response.descriptions.length - 1;
-				PokemonApp.pokeGetDesc(response.descriptions[lastArr].resource_uri);
+				
+				var descriptionComponent = new PokemonApp.Description(response.descriptions);
+				descriptionComponent.render();
+				// var lastArr = response.descriptions.length - 1;
+				// PokemonApp.pokeGetDesc(response.descriptions[lastArr].resource_uri);
 
 
 				$(".js-pkmn-name").text(response.name);
@@ -34,24 +38,18 @@ PokemonApp.Pokemon = class {
 				$(".js-pkmn-sp-def").text(response.sp_def);
 
 				$(".js-pkmn-speed").text(response.speed);
-				var typeNames = [];
 
+				var typeNames = [];
 				response.types.forEach(function (type){
 					typeNames.push(type.name);
-
 				});
 				var variable = typeNames.join(", ");
 				$(".js-pkmn-type").text(variable);
 
 				$(".js-pokemon-modal").modal("show");
 			},
-			error: pokeInfoError,
+			error: PokemonApp.handleError
 		});
-
-		function pokeInfoError(err){
-			console.log("GET error: ", err);
-		}
-
 
 	};
 
@@ -65,33 +63,25 @@ PokemonApp.pokeGetImage = function (resourceURI) {
 		success: function (response) {
 			// console.log(response);
 			$(".js-pkmn-pic").html(`<img src="http://pokeapi.co/${response.image}">`);
-
-
 		},
-		error: pokeImageErr,
+		error: PokemonApp.handleError
 	})
-		function pokeImageErr(err){
-			console.log("GET error: ", err);
-		}
-}
+};
 
 
-PokemonApp.pokeGetDesc = function ( descURI ) {
-	//Get dis foo's description
-	$.ajax({
-		type: "GET",
-		url: descURI,
-		success: function (response) {
-			console.log(response);
-			$(".js-pkmn-desc").html(response.description);
-		},
-		error: pokeDescErr,
-	})
+// PokemonApp.pokeGetDesc = function ( descURI ) {
+// 	//Get dis foo's description
+// 	$.ajax({
+// 		type: "GET",
+// 		url: descURI,
+// 		success: function (response) {
+// 			console.log(response);
+// 			$(".js-pkmn-desc").html(response.description);
+// 		},
+// 		error: PokemonApp.handleError
+// 	});
 
-	function pokeDescErr(err){
-		console.log("Desc error: ", err);
-	}
-}
+// }
 
 
 
@@ -99,7 +89,12 @@ PokemonApp.idFromUri = function (pokemonUri) {
 	var uriSegments = pokemonUri.split("/");
 	var secondLast = uriSegments.length - 2;
 	return uriSegments[secondLast];
-}
+};
+
+PokemonApp.handleError = function (error) {
+	console.log("Super freak error:", error);
+};
+
 
 
 $(document).on("ready", function() {
@@ -111,4 +106,5 @@ $(document).on("ready", function() {
 		var pokemon = new PokemonApp.Pokemon(pokemonUri);
 		pokemon.render();
 	});
+
 });

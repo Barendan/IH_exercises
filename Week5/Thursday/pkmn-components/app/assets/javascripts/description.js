@@ -1,19 +1,9 @@
 PokemonApp.Description = class {
 	
 	constructor (descriptionsArray) {
-	this.descriptionsArray = descriptionsArray;
+		this.descriptionsArray = descriptionsArray;
 	}
 
-	findLatestDescription () {
-	  var sortedArray = this.descriptionsArray.sort(function (descA, descB){
-	  	// descA.name
-	  	// descB.name
-		  if (descA.name > descB.name) {
-		    return -1;} 
-		    else if (descB.name > descA.name )
-		   {return 1;}
-	  });
-	}
 
 	render () {
 		var latestDescription = this.findLatestDescription();
@@ -24,22 +14,35 @@ PokemonApp.Description = class {
 		$.ajax({
 			type: "GET",
 			url: latestDescription.resource_uri,
-			success: function (response) {
-			console.log("Pokemon DESCRIPTION:");
-			console.log(response);
-
-			$('.js-description-wrapper').text(response.description);
-			},
+			success: PokemonApp.showDescription,
 			error: PokemonApp.handleError
 		});
 
 	}
-}
 
 
+	findLatestDescription () {
+	  var sortedArray = this.descriptionsArray.sort(function (descA, descB){
+		// Return -1 if A should be sorted before B
+		  if (descA.name > descB.name) {
+		    return -1;} 
+		// Return 1 if B should be sorted before A
+		    else if (descB.name > descA.name )
+		   {return 1;}
+		// Return 0 if A and B are "tied"
+			else { return 0;}
+	  });
 
+	  return sortedArray[0];
+	}
+};
 
+PokemonApp.showDescription = function (response) {
+	console.log("Pokemon DESCRIPTION:");
+	console.log(response);
 
+	$('.js-description-tag').text(response.description);
+};
 
 				//Sort
 				// function Comparator(a, b) {

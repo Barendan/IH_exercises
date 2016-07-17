@@ -30,6 +30,10 @@
       </div><!-- .modal-header -->
 
       <div class="modal-body">
+
+        <div class="js-pkmn-pic"></div>
+        <p class="js-description-tag"></p>
+
         <dl class="dl-horizontal">
           <dt>Height:</dt>
           <dd class="js-pkmn-height">23</dd>
@@ -58,20 +62,35 @@
           <dt>Type:</dt>
           <dd class="js-pkmn-type">888</dd>
 
-          <dt>Appearance:</dt>
-          <dd class="js-pkmn-pic"></dd>
-
-          <dt>Description:</dt>
-          <dd class="js-pkmn-desc"></dd>
-
-          
-
         </dl>
       </div><!-- .modal-body -->
 
       <div class="modal-footer">
-        <center><button class="btn-evo">See Evolutions</button></center>
-      </div>
+        <center><button class="js-evolutions btn btn-primary">See Evolutions
+        </button></center>
+      </div><!-- .modal-footer -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+<!-- Pokemon modal view2 (hidden at first) -->
+<div class="modal fade js-evolutions-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title js-ev-title">Evolutions</h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+        <ul class="js-evolutions-list">Loading...</ul>
+      </div><!-- .modal-body -->
 
     </div><!-- .modal-content -->
   </div><!-- .modal-dialog -->
