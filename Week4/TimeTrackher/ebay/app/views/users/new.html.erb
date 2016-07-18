@@ -1,0 +1,13 @@
+<h1>Daniel's Amateur Auctions </h1>
+
+<h2> User Sign Up </h2>
+
+<%= form_for [@current_user] do |u| %>
+	<%= u.label :name %>
+	<%= u.text_field :name %>
+	<Br>
+	<%= u.label :email %>
+	<%= u.text_field :email %>
+	<br>
+	<%= u.button %>
+<% end %>
