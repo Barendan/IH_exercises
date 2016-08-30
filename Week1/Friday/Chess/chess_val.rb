@@ -97,6 +97,8 @@ p white_pawn.can_move?(4, 8, "white") == false
 p white_pawn.can_move?(6, 8, "white") == false
 
 
+my_board = Board.new
+
 bPn = Pawn.new(1,7, "black")
 bPn = Pawn.new(2,7, "black")
 bPn = Pawn.new(3,7, "black")
@@ -132,7 +134,7 @@ wQ = Queen.new(4,1, "white")
 bK = King.new(5,8, "black")
 wK = King.new(5,1, "white")
 
-my_board = Board.new
+
 # my_board.add_piece(bPn)
 my_board.add_piece(bRl)
 my_board.add_piece(bRr)

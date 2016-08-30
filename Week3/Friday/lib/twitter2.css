@@ -1,0 +1,41 @@
+.container-fluid{
+	background-color: #eee;
+}
+
+#coverPic {
+	background-image: url("images/cover.png");
+	background-size: cover;
+	height: 300px;
+	width: 500px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #000;
+	background-color: #fff;
+}
+
+.row {
+	float: left;
+	background-color: #fff;
+
+}
+.col-sm-6 {
+	/*float: left;*/
+	/*width: 500px;*/
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000;
+	background-color: #fff;
+
+	font-size: 13px;
+    font-weight: 500;
+}
+.col-sm-6 ul{
+	display: inline;
+}
+.col-sm-6 li{
+	/*float: left;*/
+	display: inline;
+	padding-right: 8px;
+}
+

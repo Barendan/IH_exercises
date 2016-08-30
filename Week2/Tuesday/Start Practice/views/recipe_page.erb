@@ -1,0 +1,12 @@
+
+<hi>My Recipe For <%= @name %> </h1>
+
+<h2>Ingredients</h2>
+
+<ol class="ingredients">
+<% @ingredients.each do |ingredients| %>
+	<li> <%= ingredients %> </li>
+<% end %>
+</ol>
+
+<img src="/acat.mp4">

@@ -1,0 +1,36 @@
+body {
+	font-family: "Roboto";
+	width: 500px;
+	height: 500px;
+}
+
+.whole {
+	padding: 20px;
+	background-color: #eee;
+}
+.circle_img{
+	border-radius: 50%;
+}
+.outer {
+	margin: 7px;
+	padding: 20px;
+	background-color: #fff;
+}
+.inner {
+	/*padding: 20px;*/
+	background-color: #fff;
+	width: 100%;
+
+}
+hr {
+	width: 100%;
+	margin-left: 0px;
+}
+
+/*display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;*/

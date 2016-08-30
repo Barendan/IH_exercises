@@ -7,22 +7,33 @@ code {
 	text-align: center;
 }
 
-header, /*{
-	position: absolute;
-	top: 100px;
-	left: 100px;
+header {
+	background-color: #000;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	top: 0px;
+	left: 0px;
 	margin: 0 1.5% 25px 1.5%;
-}*/
+}
 section,
 aside,
 footer {
-	position: absolute;
-	top: 50px;
-	left: 50px;
+	display: inline-block;
+	background-color: #000;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	top: 250px;
+	left: 250px;
 	margin: 0 1.5% 25px 1.5%;
+	overflow: hidden;
 }
 
 img {
+	position: absolute;
+	top: 0;
+	left: 500px;
 	float: right;
 }
 
@@ -33,7 +44,7 @@ img {
 .box {
 	background: #3db34a;
 	text-align: center;
-	float: left;
+	float: right;
 	margin: 1.85%;
 	width: 30%;
 }

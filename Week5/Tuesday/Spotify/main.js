@@ -19,7 +19,7 @@ function fetchArtists (event) {
 			  	success: fullArtistDisplay,
 			  	error	: characterError
 				})
-			$('#js-searchName').val("")
+			$('#js-searchName').val("");
 }
 
 

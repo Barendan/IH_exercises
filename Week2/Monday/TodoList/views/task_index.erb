@@ -1,0 +1,16 @@
+<h1>Welcome to the TodoList!</h1>
+
+<ol class="tasks">
+<% @list.tasks.each do |t|  %>
+<li> <%= t.content %> </li>
+<% if the_task.complete? %>
+Done!
+<% else %>
+<li><a href="/complete_task/<%= the_task.id %>">
+	Complete this task
+</a></li>
+<% end %>
+</ol>
+
+
+<a href="/new_task">Create new task</a>

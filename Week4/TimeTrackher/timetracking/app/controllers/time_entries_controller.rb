@@ -20,10 +20,13 @@ class TimeEntriesController < ApplicationController
 		@my_entry = @my_project.time_entries.new(entry_params)
 
 		if @my_entry.save
+			flash[:notice] = "Project created succesfully"
 			redirect_to "/projects/#{@my_project.id}/time_entries"
 		else
+			flash[:alert] = "Not saved, try again."
 			render 'new'
 		end
+
 	end
 
 	def edit
@@ -37,10 +40,11 @@ class TimeEntriesController < ApplicationController
 		@my_entry = @my_project.time_entries.find_by(id: params[:id])
 
 		if @my_entry.update(entry_params)
-
+			flash[:notice] = "Project updated successfully"
 			redirect_to action:"index", controller: "time_entries", 
 			project_id: @my_project.id
 		else
+			flash[:alert] = "Not updated, try again."
 			render "edit"
 		end
 	end

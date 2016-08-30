@@ -1,0 +1,51 @@
+
+	body:after {
+		content: "1024 and up";
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		font-weight: bold;
+		font-size: 300%;
+		color: #fff;
+		background-color: #aaa;
+	}
+
+@media only screen and (max-width: 768px) {
+	body:after {
+		content: "768 and up";
+		background-color: #22ff22;
+	}
+}
+
+@media only screen and (max-width: 480px ) {
+	body:after {
+		content: "480 and up";
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		font-weight: bold;
+		font-size: 300%;
+		color: #fff;
+		background-color: #000;
+	}
+}
+
+@media only screen and (max-width: 320px ) {
+	body:after {
+		content: "320 and up";
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		font-weight: bold;
+		font-size: 300%;
+		color: #fff;
+		background-color: #880088;
+	}
+}
+
+@media screen and () {
+
+}

@@ -1,0 +1,55 @@
+
+Bush - swallowed
+A perfect circle - passive (check out whole albums)
+Godsmack - voodoo
+Brambles - Such Owls As You (very chill)
+To the wonder- aqualung
+Left alone - flume
+Daddy Issues - The Neighborhood (recheck all others too)
+Broken van - cunninlynguists
+I get by everlast
+ordinary people - John legend
+if I tell you I love you- melody gardot
+Placid Acid by Tourist
+Coldplay - A Message
+Alina Baraz & Galimatias - Fantasy
+The neighbourhood - $ting
+MadVamp - Vibe
+Piano Man - Billy Joel
+The Script -all (you forgot about them)
+
+
+Install google chrome addons: 
+react detector(by Kent) & react dev tools (by facebook)
+
+
+
+
+
+
+
+SQL concepts:
+Study first of day 3
+SUBQUERIES
+
+ActiveRecord:
+.pluck
+.select
+.where
+.order
+.limit
+
+What does this mean:
+protect_from_forgery with: :null_session
+^ with: :exception
+
+
+What are routing concerns? (RoR)
+Are has_many and belong_to only for rails with databases?
+
+How to best use create_join_table
+
+
+
+
+

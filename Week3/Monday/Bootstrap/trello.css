@@ -1,0 +1,157 @@
+body {
+	background-image: url("https://trello-backgrounds.s3.amazonaws.com/53baf533e697a982248cd73f/4200x4200/48dbf0b5a546541e847e267a5dcd2201/shutterstock_134707556.jpg");
+	background-size: cover;
+	overflow: auto;
+}
+.col-sm-3 ul {
+	/*background: #000;*/
+	padding-left: 0cm;
+}
+.col-sm-3 li {
+	list-style-type: none;
+	display: inline;
+}
+.col-sm-3 a {
+	color: #fff;
+	display: inline-block;
+	font-weight: 700;
+	height: 15px;
+	line-height: 15px;
+	margin: 0 5px 5px 0;
+	padding: 8px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.col-sm-3 li:hover {
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+}
+
+.sign {
+	float: left;
+	background: #61bd4f;
+	margin-left: 2cm;
+	margin-right: 2px;
+	padding: 0 5pt;
+	line-height: 30px;
+	border-radius: 3px;
+}
+.sign:hover {
+	background: #5aac44;
+	padding: 0 9pt;
+}
+
+.login {
+	display: inline-block;
+	background: rgba(255,255,255,.2);
+	padding: 0 5pt;
+	line-height: 30px;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+.login:hover {
+	background: rgba(255,255,255,.3);
+	padding: 0 9pt;
+}
+.row {
+	/*background-color: #000;*/
+	margin-top: 4px;
+}
+
+.col-sm-9 a{
+	color: #fff;
+	font-size: 18px;
+	display: inline-block;
+	font-weight: 700;
+	height: 15px;
+	line-height: 30px;
+	margin: 0 5px 5px 0;
+	padding: 8px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.col-sm-2 {
+	overflow: auto;
+	margin: 5px 5px 10px 10px;
+	padding: 7px;
+	float: left;
+	background-color: #ddd;
+	display: inline-block;
+	border-radius: 3px;
+	font-weight: bold;
+}
+.col-sm-2 ul {
+	padding: 0;
+}
+.col-sm-2 li {
+	cursor: pointer;
+	border-color: #000;
+	border-radius: 3px;
+	background-color: #fff;
+	margin: 5px;
+	padding: 10px;
+	border: 5px;
+	list-style-type: none;
+	font-weight: lighter;
+	box-shadow: 0px 5px 4px #ccc;
+}
+.col-sm-2 li:hover {
+	background-color: #ccc;
+}
+.col-sm-4 {
+	padding: 9pt 6px 9pt 9pt;
+	overflow: auto;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	background-color: #eee;
+	text-align: center;
+	font-weight: bold;
+	height: 700px;
+	width: 28%;
+	box-shadow: 0px 0px 6px #888888;
+}
+.card_purple {
+	overflow: auto;
+	background-color: purple;
+	color: #ff00ff;
+	height: 8px;
+	width: 42px;
+	border-radius: 4px;
+	margin: 0 3px 3px 0;
+}
+.card_green {
+	overflow: auto;
+	background-color: #51e898;
+	color: #ff00ff;
+	height: 8px;
+	width: 42px;
+	border-radius: 4px;
+	margin: 0 3px 3px 0;
+}
+.card_pink {
+	overflow: auto;
+	background-color: PaleVioletRed;
+	color: #ff00ff;
+	height: 8px;
+	width: 42px;
+	border-radius: 4px;
+	margin: 0 3px 3px 0;
+}
+.card_blue {
+	overflow: auto;
+	background-color: blue;
+	color: #ff00ff;
+	height: 8px;
+	width: 42px;
+	border-radius: 4px;
+	margin: 0 3px 3px 0;
+}
+.pic {
+	background-image: url("sample.jpg");
+	background-size: cover;
+	height: 245px;
+}
+hr {
+	border-color: #ccc;
+}

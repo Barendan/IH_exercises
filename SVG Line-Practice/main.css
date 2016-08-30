@@ -1,0 +1,61 @@
+body {
+	background-image: url("file:///home/aurelius/matrix.gif");
+	background-size: cover;
+}
+
+.container{
+	width: 100%;
+}
+
+.enterOne{
+	/*float: left;*/
+	background-image: url("");
+	background-color: #FFF;
+	background-size: cover;
+	position: absolute;
+	top: 210px;
+	left: 300px;
+	width: 100px;
+	height: 330px;
+	opacity: 0.5;
+}
+.enterOne:hover{
+  	border: 3px solid #FFF;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+
+.enterTwo{
+	background-image: url("");
+	background-color: #FFF;
+	background-size: cover;
+	position: absolute;
+	top: 210px;
+	left: 450px;
+	width: 100px;
+	height: 330px;
+	opacity: 0.5;
+}
+.enterTwo:hover{
+  	border: 1px solid #3c3c3c;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.enterThree{
+	background-image: url("");
+	background-color: #FFF;
+	background-size: cover;
+	position: absolute;
+	top: 210px;
+	left: 600px;
+	width: 100px;
+	height: 330px;
+	opacity: 0.5;
+}
+.enterThree:hover{
+  	border: 1px solid #3c3c3c;
+	cursor: pointer;
+	opacity: 0.8;
+}
